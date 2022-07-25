@@ -37,11 +37,11 @@ function getPlayerChoice(){
         let playerChoice=prompt(userPrompt)
         //gets rid of spaces in user input
         playerChoice= playerChoice.replace(/\s+/g,'');
-        console.log(playerChoice)
+        //console.log(playerChoice)
         // capatalizes the first letter in the inpus
         playerChoice= playerChoice.toLowerCase()
         playerChoice= playerChoice[0].toUpperCase()+ playerChoice.substring(1)
-        console.log(playerChoice)
+        //console.log(playerChoice)
         if(playerChoice=="Rock"||playerChoice=="Paper"||playerChoice=="Scissors"){
             return playerChoice
         }
@@ -67,6 +67,7 @@ function game(){
             case(0):break;
             default:console.log("Something has gone very wrong")
         }
+        //prints out the result of each round that the current score
         console.log(result[1])
         console.log("Curent Score: Player = "+playerWins+" vs Computer = "+computerWins)
     }
