@@ -1,9 +1,20 @@
 console.log("Lets Play Rock Paper Scissors!")
-
+// returns a randomly generated choice for a game of rock paper scissors
 function getComputerChoice(){
     const rpsOptions =["Rock", "Paper", "Scissors"]
     return rpsOptions[Math.floor(Math.random()*3)]
 }
+
+
+/*
+Returns the result for rock paper scissors in the form of an array 
+1, win string for a win
+-1, lose string for a loss
+0, draw string for a draw
+
+
+
+*/
 function playRound(playerSelection, computerSelection){
     switch(playerSelection){
         case "Rock":
@@ -30,6 +41,8 @@ function playRound(playerSelection, computerSelection){
 
 }
 
+
+// prompts and sanatizes a user choice for rock paper scissors
 function getPlayerChoice(){
     let validInput=false
     let userPrompt = "Enter Rock, Paper, or Scissors!-->"
@@ -52,6 +65,7 @@ function getPlayerChoice(){
     }
 }
 
+// plays 5 round of rock paper scissors and keeps score. 
 function game(){
     console.log("Lets play some Rock Paper Scissors!")
     let playerWins =0
@@ -84,4 +98,6 @@ function game(){
 
 }
 
+
+//plays the game
 game()
