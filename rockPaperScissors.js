@@ -30,7 +30,31 @@ function playRound(playerSelection, computerSelection){
 
 }
 
+function getPlayerChoice(){
+    let validInput=false
+    let userPrompt = "Enter Rock, Paper, or Scissors!-->"
+    while(!validInput){
+        let playerChoice=prompt(userPrompt)
+        //gets rid of spaces in user input
+        playerChoice= playerChoice.replace(/\s+/g,'');
+        console.log(playerChoice)
+        // capatalizes the first letter in the inpus
+        playerChoice= playerChoice.toLowerCase()
+        playerChoice= playerChoice[0].toUpperCase()+ playerChoice.substring(1)
+        console.log(playerChoice)
+        if(playerChoice=="Rock"||playerChoice=="Paper"||playerChoice=="Scissors"){
+            return playerChoice
+        }
+        else{
+            userPrompt="Please enter only Rock, Paper, Or Scissors-->"
+        }
+
+    }
+}
+
+
 
 for ( let i = 0; i<5; i++){
-    console.log(playRound("Rock",getComputerChoice()))
+    
+    console.log(playRound(getPlayerChoice(),getComputerChoice()))
 }
